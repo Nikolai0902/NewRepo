@@ -1,78 +1,78 @@
+ï»¿#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdbool.h>
+#include <locale.h>
 
-int main(void)
-{
-	int i;
-	bool isN = true;
+/*
+ÐÐ°Ð¿Ð¸ÑÐ°Ñ‚ÑŒ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñƒ, ÐºÐ¾Ñ‚Ð¾Ñ€Ð°Ñ:
+Ð¿Ð¾ Ð·Ð°Ð´Ð°Ð½Ð½Ð¾Ð¼Ñƒ Ñ‡Ð¸ÑÐ»Ñƒ Ð² Ð´Ð¸Ð°Ð¿Ð°Ð·Ð¾Ð½Ðµ 100â€”999 Ð²Ñ‹Ð²Ð¾Ð´Ð¸Ñ‚ â€” ÑÐ»Ð¾Ð²ÐµÑÐ½Ð¾Ðµ Ð¾Ð¿Ð¸ÑÐ°Ð½Ð¸Ðµ Ð´Ð°Ð½Ð½Ð¾Ð³Ð¾ Ñ‡Ð¸ÑÐ»Ð°,
+Ð½Ð°Ð¿Ñ€Ð¸Ð¼ÐµÑ€ : 256 â€” Â«Ð´Ð²ÐµÑÑ‚Ð¸ Ð¿ÑÑ‚ÑŒÐ´ÐµÑÑÑ‚ ÑˆÐµÑÑ‚ÑŒÂ», 814 â€” Â«Ð²Ð¾ÑÐµÐ¼ÑŒÑÐ¾Ñ‚ Ñ‡ÐµÑ‚Ñ‹Ñ€Ð½Ð°Ð´Ñ†Ð°Ñ‚ÑŒÂ».
+*/
+int main(void) {
 
-	while (isN)
-	{
-		scanf_s("%o", &i);
+	setlocale(LC_ALL, "Rus");
+	int i = 0;
+	bool isT = true;
 
-		if (i >= 100 && i <= 999) {
-			switch (i / 100)
-			{
-			case 1: printf("Ñòî "); break;
-			case 2: printf("Äâåñòè "); break;
-			case 3: printf("Òðèñòà "); break;
-			case 4: printf("×åòûðåñòà "); break;
-			case 5: printf("Ïÿòüñîò "); break;
-			case 6: printf("Øåñòüñîò "); break;
-			case 7: printf("Ñåìüñîò "); break;
-			case 8: printf("Âîñåìüñîò "); break;
-			case 9: printf("Äåâÿòüñîò "); break;
-			}
+		printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾: \n");
+		scanf("%d", &i);
 
-			switch ((i % 100) / 10)
-			{
-			case 2: printf("Äâàäñàòü "); break;
-			case 3: printf("Òðèäñàòü "); break;
-			case 4: printf("Ñîðîê "); break;
-			case 5: printf("Ïÿòäåñÿò "); break;
-			case 6: printf("Øåñòüäåñÿò "); break;
-			case 7: printf("Ñåìüäåñÿò "); break;
-			case 8: printf("Âîñåìäåñÿò "); break;
-			case 9: printf("Äåâÿíîñòî "); break;
-			}
 
-			if (i % 100 >= 10 & i % 100 < 20) {
-				switch (i % 100) {
-				case 10: printf("äåñÿòü"); break;
-				case 11: printf("îäèíàäöàòü"); break;
-				case 12: printf("äâåíàäöàòü"); break;
-				case 13: printf("òðèíàäöàòü"); break;
-				case 14: printf("÷åòûðíàäöàòü"); break;
-				case 15: printf("ïÿòíàäöàòü"); break;
-				case 16: printf("øåñòíàäöàòü"); break;
-				case 17: printf("ñåìíàäöàòü"); break;
-				case 18: printf("âîñåìíàäöàòü"); break;
-				case 19:printf("äåâÿòíàäöàòü"); break;
-				}
-			}
-			else {
-				switch (i % 10)
+			if (i >= 100 && i <= 999) {
+				switch (i / 100)
 				{
-				case 0: printf("íîëü\n"); break;
-				case 1: printf("îäèí\n"); break;
-				case 2: printf("äâà\n"); break;
-				case 3: printf("òðè\n"); break;
-				case 4: printf("÷åòûðå"); break;
-				case 5: printf("ïÿòü"); break;
-				case 6: printf("øåñòü"); break;
-				case 7: printf("ñåìü"); break;
-				case 8: printf("âîñåìü"); break;
-				case 9: printf("äåâÿòü"); break;
+				case 1: printf("Ð¡Ñ‚Ð¾ "); break;
+				case 2: printf("Ð”Ð²ÐµÑÑ‚Ð¸ "); break;
+				case 3: printf("Ð¢Ñ€Ð¸ÑÑ‚Ð° "); break;
+				case 4: printf("Ð§ÐµÑ‚Ñ‹Ñ€ÐµÑÑ‚Ð° "); break;
+				case 5: printf("ÐŸÑÑ‚ÑŒÑÐ¾Ñ‚ "); break;
+				case 6: printf("Ð¨ÐµÑÑ‚ÑŒÑÐ¾Ñ‚ "); break;
+				case 7: printf("Ð¡ÐµÐ¼ÑŒÑÐ¾Ñ‚ "); break;
+				case 8: printf("Ð’Ð¾ÑÐµÐ¼ÑŒÑÐ¾Ñ‚ "); break;
+				case 9: printf("Ð”ÐµÐ²ÑÑ‚ÑŒÑÐ¾Ñ‚ "); break;
 				}
+
+				switch ((i % 100) / 10)
+				{
+				case 2: printf("Ð”Ð²Ð°Ð´ÑÐ°Ñ‚ÑŒ "); break;
+				case 3: printf("Ð¢Ñ€Ð¸Ð´ÑÐ°Ñ‚ÑŒ "); break;
+				case 4: printf("Ð¡Ð¾Ñ€Ð¾Ðº "); break;
+				case 5: printf("ÐŸÑÑ‚Ð´ÐµÑÑÑ‚ "); break;
+				case 6: printf("Ð¨ÐµÑÑ‚ÑŒÐ´ÐµÑÑÑ‚ "); break;
+				case 7: printf("Ð¡ÐµÐ¼ÑŒÐ´ÐµÑÑÑ‚ "); break;
+				case 8: printf("Ð’Ð¾ÑÐµÐ¼Ð´ÐµÑÑÑ‚ "); break;
+				case 9: printf("Ð”ÐµÐ²ÑÐ½Ð¾ÑÑ‚Ð¾ "); break;
+				}
+
+				if (i % 100 >= 10 & i % 100 < 20) {
+					switch (i % 100) {
+					case 10: printf("Ð´ÐµÑÑÑ‚ÑŒ"); break;
+					case 11: printf("Ð¾Ð´Ð¸Ð½Ð°Ð´Ñ†Ð°Ñ‚ÑŒ"); break;
+					case 12: printf("Ð´Ð²ÐµÐ½Ð°Ð´Ñ†Ð°Ñ‚ÑŒ"); break;
+					case 13: printf("Ñ‚Ñ€Ð¸Ð½Ð°Ð´Ñ†Ð°Ñ‚ÑŒ"); break;
+					case 14: printf("Ñ‡ÐµÑ‚Ñ‹Ñ€Ð½Ð°Ð´Ñ†Ð°Ñ‚ÑŒ"); break;
+					case 15: printf("Ð¿ÑÑ‚Ð½Ð°Ð´Ñ†Ð°Ñ‚ÑŒ"); break;
+					case 16: printf("ÑˆÐµÑÑ‚Ð½Ð°Ð´Ñ†Ð°Ñ‚ÑŒ"); break;
+					case 17: printf("ÑÐµÐ¼Ð½Ð°Ð´Ñ†Ð°Ñ‚ÑŒ"); break;
+					case 18: printf("Ð²Ð¾ÑÐµÐ¼Ð½Ð°Ð´Ñ†Ð°Ñ‚ÑŒ"); break;
+					case 19:printf("Ð´ÐµÐ²ÑÑ‚Ð½Ð°Ð´Ñ†Ð°Ñ‚ÑŒ"); break;
+					}
+				}
+				else {
+					switch (i % 10)
+					{
+					case 1: printf("Ð¾Ð´Ð¸Ð½\n"); break;
+					case 2: printf("Ð´Ð²Ð°\n"); break;
+					case 3: printf("Ñ‚Ñ€Ð¸\n"); break;
+					case 4: printf("Ñ‡ÐµÑ‚Ñ‹Ñ€Ðµ"); break;
+					case 5: printf("Ð¿ÑÑ‚ÑŒ"); break;
+					case 6: printf("ÑˆÐµÑÑ‚ÑŒ"); break;
+					case 7: printf("ÑÐµÐ¼ÑŒ"); break;
+					case 8: printf("Ð²Ð¾ÑÐµÐ¼ÑŒ"); break;
+					case 9: printf("Ð´ÐµÐ²ÑÑ‚ÑŒ"); break;
+					}
+				}
+			
 			}
-
-
-			isN = false;
-		}
-		else
-		{
-			printf("Enter value 100...999\n");
-		}
-	}
 	return 0;
 }
