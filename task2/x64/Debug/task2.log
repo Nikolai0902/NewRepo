@@ -1,0 +1,4 @@
+﻿  Source2.c
+C:\Users\Nikolai\Desktop\C\task\task2\Source2.c(11,6): warning C4101: arr1: неиспользованная локальная переменная
+C:\Users\Nikolai\Desktop\C\task\task2\Source2.c(12,6): warning C4101: arr2: неиспользованная локальная переменная
+  task2.vcxproj -> C:\Users\Nikolai\Desktop\C\task\x64\Debug\task2.exe
