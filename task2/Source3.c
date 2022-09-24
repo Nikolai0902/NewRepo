@@ -9,6 +9,7 @@
 */
 int main(void) {
 
+	setlocale(LC_ALL, "Rus");
 	int arr1[5];
 	int arr2[5];
 
