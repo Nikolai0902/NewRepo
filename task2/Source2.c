@@ -8,8 +8,38 @@
 по двум данным массивам определ€ет те элементы первого массива, которых нет во втором.ї.
 */
 int main(void) {
-	int arr1[10];
-	int arr2[10];
+
+	setlocale(LC_ALL, "Rus");
+	int arr1[5];
+	int arr2[5];
+
+	printf("¬ведите данные первого массива: \n");
+	for (int i = 0; i < 5; i++)
+	{
+		printf("a[%d] = ", i);
+		scanf("%d", &arr1[i]); // &arr1[i] - адрес i-го элемента массива
+	}
+
+	printf("¬ведите данные второго массива: \n");
+	for (int i = 0; i < 5; i++)
+	{
+		printf("a[%d] = ", i);
+		scanf("%d", &arr2[i]); // &arr2[i] - адрес i-го элемента массива
+	}
+
+	printf("–езультат: \n");
+	for (int i = 0; i < 5; i++) {
+		bool flag = true;
+		for (int j = 0; j < 5; j++) {
+			if (arr1[i] == arr2[j]) {
+				flag = false;
+				break;
+			}
+		}
+		if (flag == true) {
+			printf("%d", arr1[i]);
+		}
+	}
 
 	return 0;
 }
