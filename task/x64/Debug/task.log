@@ -1,0 +1,3 @@
+﻿  Source.c
+C:\Users\Nikolai\Desktop\C\task\task\Source.c(47,37): warning C4554: "&": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
+  task.vcxproj -> C:\Users\Nikolai\Desktop\C\task\x64\Debug\task.exe
